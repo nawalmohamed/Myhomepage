@@ -16,6 +16,9 @@
   </head>
     
   <body> 
+    <div class="iputBox">
+      <input type="text" required="required">
+      <span>COMMENT</span>
     <nav role="navigation">
   <div id="menuToggle">
     
@@ -304,6 +307,46 @@ body
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+      
+      *{
+  matgin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 30px;
+  background: #1d2b3a;
+}
+.inputBox{
+  position: relative;
+  width: 300px;
+}
+.inputBox input{
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+}
+.inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  pointer-event: none;
+  font-size: 1em;
+  color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+  
 }
 
     </style>
