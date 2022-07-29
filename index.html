@@ -17,11 +17,12 @@
     
   <body> 
     
+    <section>
     <div class="inputBox">
       <input type="text" required="required">
       <span>COMMENT</span>
     </div>
-    
+    </section>
     
     <nav role="navigation">
   <div id="menuToggle">
@@ -318,6 +319,16 @@ body
 {
   transform: none;
 }
+      section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 30px;
+  background: #1d2b3a;
+}
+      
       .inputBox{
   display: flex;
   justify-content: center;
