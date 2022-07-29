@@ -17,26 +17,30 @@
   </head>
     
   <body> 
-  <div class="bg-image"></div> 
-<div class="bg-text">
-  <h1>I'm Nawal Mohamed</h1>
-</div> 
-    </div>  
-    <!-- Top Navigation Menu -->
-<div class="topnav">
-  <a href="#home" class="active">Logo</a>
-  <!-- Navigation links (hidden by default) -->
-  <div id="myLinks">
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </div>
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-  </div>   
+ <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">WebDev.</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+</header> 
   
    <div class="circular--portrait"> <img src="https://i.postimg.cc/ZB0X3hGk/imgnawal2002.jpg" /> </div>
 
@@ -143,47 +147,101 @@ h2{
 }
 
 
-/* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Style navigation menu links */
-.topnav a {
-  color: white;
-  padding: 10px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-  top: absolute;
+li {
+    list-style: none;
 }
 
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+a {
+    text-decoration: none;
+}
+      .header{
+    border-bottom: 1px solid #E2E8F0;
 }
 
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+      .hamburger {
+    display: none;
 }
 
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #8FBC8F;
-  color: white;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+      
+      .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+      @media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
 }
       
       
@@ -201,11 +259,28 @@ h2{
     </style>
 <script>
   const hamburger = document.querySelector(".hamburger");
-  const topNav = document.querySelector(".top-nav");
-  
-  hamburger.addEventListener("click", () => {
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
     hamburger.classList.toggle("active");
-    topNav.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+  
+  // Inside the Media Query.
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
   
 
 </script>
