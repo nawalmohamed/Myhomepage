@@ -36,7 +36,7 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
-     
+  </div>   
   
    <div class="circular--portrait"> <img src="https://i.postimg.cc/ZB0X3hGk/imgnawal2002.jpg" /> </div>
 
@@ -199,24 +199,16 @@ h2{
 }
 
     </style>
-
-  <script>
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const topNav = document.querySelector(".top-nav");
   
-    const {
-  core: { test, expect, run },
-  prettify
-} = window.jestLite;
-
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    topNav.classList.toggle("active");
   
-  
-  </script>
 
-
-
-
-
-   
-     
+</script>
      
 </body>
 </html>
