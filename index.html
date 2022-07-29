@@ -166,7 +166,49 @@ h2{
   width: 300px;
 }
 
-
+ section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 30px;
+  background: #1d2b3a;
+}
+      
+      .inputBox{
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #232323;
+}
+.inputBox{
+  position: relative;
+  width: 300px;
+}
+.inputBox input{
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: #232323;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+}
+.inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  pointer-event: none;
+  font-size: 1em;
+  color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+  
+}
+      
 body
 {
   margin: 0;
@@ -319,48 +361,7 @@ body
 {
   transform: none;
 }
-      section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  flex-direction: column;
-  gap: 30px;
-  background: #1d2b3a;
-}
-      
-      .inputBox{
-  display: flex;
-  justify-content: center;
-  align-item: center;
-  min-height: 100vh;
-  flex-direction: column;
-  background: #232323;
-}
-.inputBox{
-  position: relative;
-  width: 300px;
-}
-.inputBox input{
-  width: 100%;
-  padding: 20px;
-  border: 1px solid rgba(255,255,255,0.25);
-  background: #232323;
-  border-radius: 5px;
-  outline: none;
-  color: #fff;
-  font-size: 1em;
-}
-.inputBox span{
-  position: absolute;
-  left: 0;
-  padding: 20px;
-  pointer-event: none;
-  font-size: 1em;
-  color: rgba(255,255,255,0.25);
-  text-transform: uppercase;
-  
-}
+     
       
   
 
